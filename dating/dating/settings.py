@@ -13,8 +13,11 @@ import sys
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 sys.path.append("D:\\Code\\QueDateWeb")
-from backend.dating.data import config
+
+# TODO: If you have it underlined as an error, then it is not an error
+from data import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
