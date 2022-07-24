@@ -15,9 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import index
 
+app_name = 'dating'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
-    path('', include('frontend.urls'))
+    path('', index, name='index'),
+    path('auth/', include('authapp.urls', namespace='authapp'), name='auth'),
+    # path('', include('frontend.urls'))
 ]
